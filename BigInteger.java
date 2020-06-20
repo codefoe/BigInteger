@@ -21,6 +21,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BigInteger {
+    
+    public static void main(String[] args) {
+        BigInteger b = new BigInteger("11234");
+        BigInteger b1 = new BigInteger("-12345");
+        System.out.println(b.sub(b1));
+        b = new BigInteger("1000000000000000000");
+        b1 = new BigInteger("999999999999999999");
+        System.out.println(b.sub(b1));
+        System.out.println(b.add(b1));
+    }
 
     private static final boolean POSITIVE = true;
     private static final boolean NEGATIVE = false;
@@ -487,16 +497,6 @@ public class BigInteger {
             result += i;
         }
         return result;
-    }
-
-    public static void main(String[] args) {
-        BigInteger b = new BigInteger("11234");
-        BigInteger b1 = new BigInteger("-12345");
-        System.out.println(b.sub(b1));
-        b = new BigInteger("1000000000000000000");
-        b1 = new BigInteger("999999999999999999");
-        System.out.println(b.sub(b1));
-        System.out.println(b.add(b1));
     }
 
 }
